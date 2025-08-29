@@ -1,0 +1,145 @@
+---
+// Usamos CSS animations que ya funcionaban
+---
+
+<section class="relative bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+  <!-- Video de fondo -->
+  <div class="absolute inset-0 z-0">
+    <video 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      class="w-full h-full object-cover"
+    >
+      <source src="/videos/hero-video.mp4" type="video/mp4">
+      <!-- Fallback a imagen si el video no carga -->
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHJlY3Qgd2lkdGg9IjUwJSIgaGVpZ2h0PSI1MCUiIGZpbGw9InJnYmEoOTksIDEwMiwgMjQxLCAwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')]"></div>
+    </video>
+    
+    <!-- Overlay oscuro -->
+    <div class="absolute inset-0 bg-black/40"></div>
+    
+    <!-- Patrón sutil sobre el overlay -->
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHJlY3Qgd2lkdGg9IjUwJSIgaGVpZ2h0PSI1MCUiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNSkiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')] opacity-30"></div>
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="text-center md:text-left animate-fade-in-left">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
+          Cuidamos a tus <span class="text-gradient">mascotas</span> como en casa
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-lg mx-auto md:mx-0">
+          Servicios veterinarios de calidad con atención personalizada y el cariño que tu mascota se merece.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#contacto" class="btn-primary">
+            Solicitar Cita
+          </a>
+          <a href="#servicios" class="bg-white/90 text-indigo-600 hover:bg-white font-medium py-3 px-6 rounded-lg border border-white/20 transition-all duration-300 backdrop-blur-sm">
+            Nuestros Servicios
+          </a>
+        </div>
+      </div>
+      <div class="relative animate-fade-in-scale">
+        <div class="relative flex justify-center items-center h-full">
+          <!-- Badge mejorado de experiencia -->
+          <div class="w-48 mx-auto bg-white/50 backdrop-blur-sm px-8 py-8 rounded-3xl shadow-2xl animate-bounce-in border border-white/30">
+            <div class="text-center relative">
+              <!-- Icono de experiencia -->
+              <div class="absolute -top-4 -right-4 w-10 h-10 bg-indigo-100/80 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              
+              <!-- Número de años -->
+              <div class="text-5xl font-bold text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text mb-2">
+                15+
+              </div>
+              
+              <!-- Texto descriptivo -->
+              <p class="text-base font-medium text-gray-800 leading-tight">
+                Años de<br>
+                <span class="text-indigo-600 font-semibold">Experiencia</span>
+              </p>
+              
+              <!-- Línea decorativa -->
+              <div class="w-16 h-1.5 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full mx-auto mt-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Gradiente suave en la parte inferior -->
+  <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+</section>
+
+<style>
+  /* Animación de entrada desde la izquierda */
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+  }
+  /* Animación de entrada con escala */
+  .animate-fade-in-scale {
+    animation: fadeInScale 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+  /* Animación de rebote para el badge */
+  .animate-bounce-in {
+    animation: bounceIn 0.6s ease-out 0.8s forwards;
+    opacity: 0;
+  }
+  /* Keyframes para las animaciones */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  /* Efecto de gradiente para el texto */
+  .text-gradient {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  /* Estilos para el botón primario */
+  .btn-primary {
+    @apply bg-indigo-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+</style>

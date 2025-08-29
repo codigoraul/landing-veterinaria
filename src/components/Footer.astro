@@ -1,0 +1,101 @@
+---
+import { FaFacebook, FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaPaw } from 'react-icons/fa';
+---
+
+<footer class="bg-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <!-- Logo y descripción -->
+      <div class="space-y-4">
+        <div class="flex items-center">
+          <svg class="text-2xl text-indigo-400 mr-2 w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          <span class="text-2xl font-bold">VetCare</span>
+        </div>
+        <p class="text-gray-400">
+          Tu clínica veterinaria de confianza, ofreciendo el mejor cuidado para tus mascotas con amor y profesionalismo.
+        </p>
+        <div class="flex space-x-4 pt-2">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <span class="sr-only">Facebook</span>
+            <FaFacebook className="w-5 h-5" />
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <span class="sr-only">Instagram</span>
+            <FaInstagram className="w-5 h-5" />
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <span class="sr-only">WhatsApp</span>
+            <FaWhatsapp className="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+      
+      <!-- Enlaces rápidos -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Enlaces rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Inicio</a></li>
+          <li><a href="#servicios" class="text-gray-400 hover:text-white transition-colors duration-300">Servicios</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Sobre Nosotros</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonios</a></li>
+          <li><a href="#contacto" class="text-gray-400 hover:text-white transition-colors duration-300">Contacto</a></li>
+        </ul>
+      </div>
+      
+      <!-- Nuestros servicios -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Nuestros servicios</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Consulta General</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Vacunación</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Cirugía</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Peluquería</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Odontología</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Emergencias 24/7</a></li>
+        </ul>
+      </div>
+      
+      <!-- Información de contacto -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <FaMapMarkerAlt className="text-indigo-400 mt-1 mr-3 flex-shrink-0" />
+            <span class="text-gray-400">Av. Principal 1234, Ciudad, País</span>
+          </li>
+          <li class="flex items-center">
+            <FaPhoneAlt className="text-indigo-400 mr-3" />
+            <a href="tel:+1234567890" class="text-gray-400 hover:text-white transition-colors duration-300">+1 234 567 890</a>
+          </li>
+          <li class="flex items-center">
+            <FaEnvelope className="text-indigo-400 mr-3" />
+            <a href="mailto:hola@vetcare.com" class="text-gray-400 hover:text-white transition-colors duration-300">hola@vetcare.com</a>
+          </li>
+          <li class="flex items-start">
+            <FaClock className="text-indigo-400 mt-1 mr-3 flex-shrink-0" />
+            <div class="text-gray-400">
+              <p>Lun-Vie: 9:00 - 20:00</p>
+              <p>Sáb: 9:00 - 14:00</p>
+              <p>Dom: Cerrado</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-800 mt-12 pt-8">
+      <div class="md:flex md:items-center md:justify-between">
+        <p class="text-center md:text-left text-gray-400 text-sm">
+          &copy; {new Date().getFullYear()} VetCare. por <a href="https://diseñopaginas.cl/landing/" class="text-indigo-400 hover:text-white transition-colors duration-300">Diseño Landing</a> 
+        </p>
+        <div class="mt-4 md:mt-0 flex justify-center md:justify-end space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white text-sm">Términos de servicio</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm">Política de privacidad</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

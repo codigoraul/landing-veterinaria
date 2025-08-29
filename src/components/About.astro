@@ -1,0 +1,158 @@
+---
+// Removemos framer-motion y react-icons
+const features = [
+  'Equipo veterinario altamente calificado',
+  'Tecnología de última generación',
+  'Atención personalizada',
+  'Instalaciones modernas y limpias',
+  'Servicio de emergencia 24/7',
+  'Precios competitivos'
+];
+---
+
+<section id="sobre-nosotros" class="section-padding bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div
+        class="relative animate-fade-in-left"
+      >
+        <div class="relative rounded-2xl overflow-hidden shadow-xl">
+          <img 
+            src="/images/about-vet.jpg" 
+            alt="Equipo veterinario" 
+            class="w-full h-auto"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6 text-white">
+            <p class="text-4xl font-bold">15+</p>
+            <p class="text-lg">Años de experiencia</p>
+          </div>
+        </div>
+        
+        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg hidden md:block animate-bounce-in">
+          <div class="text-center">
+            <p class="text-3xl font-bold text-indigo-600">100%</p>
+            <p class="text-sm text-gray-600">Clientes satisfechos</p>
+          </div>
+        </div>
+      </div>
+      
+      <div
+        class="animate-fade-in-right"
+      >
+        <span class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-medium mb-4">
+          Sobre Nosotros
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Cuidamos a tus mascotas con amor y profesionalismo
+        </h2>
+        <p class="text-gray-600 mb-6">
+          En nuestra clínica veterinaria, entendemos que tus mascotas son parte de tu familia. Por eso, nos esforzamos por ofrecer la mejor atención médica con un toque personal y cariñoso.
+        </p>
+        <p class="text-gray-600 mb-8">
+          Nuestro equipo de profesionales altamente calificados está comprometido con el bienestar de tus mascotas, utilizando tecnología de punta y los últimos avances en medicina veterinaria.
+        </p>
+        
+        <div class="space-y-3 mb-8">
+          {features.map((feature, index) => (
+            <div class="flex items-center animate-fade-in-up" style={`animation-delay: ${index * 0.1}s`}>
+              <svg class="text-green-500 mr-3 flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">{feature}</span>
+            </div>
+          ))}
+        </div>
+        
+        <a 
+          href="#contacto" 
+          class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105"
+        >
+          Conoce más sobre nosotros
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animación de entrada desde la izquierda */
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+  }
+  
+  /* Animación de entrada desde la derecha */
+  .animate-fade-in-right {
+    animation: fadeInRight 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+  
+  /* Animación de entrada desde abajo */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  /* Animación de rebote para el badge */
+  .animate-bounce-in {
+    animation: bounceIn 0.6s ease-out 0.8s forwards;
+    opacity: 0;
+  }
+  
+  /* Keyframes para las animaciones */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Estilos para la sección */
+  .section-padding {
+    @apply py-20;
+  }
+</style>
